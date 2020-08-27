@@ -9,12 +9,20 @@ repositories {
 }
 
 dependencies {
+    implementation 'io.quarkus:quarkus-scheduler'
     implementation 'io.quarkus:quarkus-kubernetes'
     implementation 'io.quarkus:quarkus-scala'
     implementation 'io.quarkus:quarkus-smallrye-openapi'
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'org.scala-lang:scala-library:2.12.8'
     implementation 'io.quarkus:quarkus-resteasy'
+    compile 'net.ruippeixotog:scala-scraper_2.12:2.2.0'
+    implementation 'com.fasterxml.jackson.module:jackson-module-scala_2.12:2.11.0.rc1'
+    implementation 'io.quarkus:quarkus-resteasy-jackson'
+//    implementation 'com.sksamuel.elastic4s:elastic4s-core_2.12:7.4.0'
+    implementation 'com.sksamuel.elastic4s:elastic4s-json-jackson_2.12:7.5.0'
+    implementation 'com.sksamuel.elastic4s:elastic4s-client-esjava_2.12:7.5.0'
+    implementation "io.reactivex.rxjava3:rxjava:3.0.4"
 
     testImplementation 'io.quarkus:quarkus-junit5'
     testImplementation 'io.rest-assured:rest-assured'
